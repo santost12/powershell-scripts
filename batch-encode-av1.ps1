@@ -1,9 +1,11 @@
-# Change these for your computer
-
-$ffmpegBinary = "C:\Users\tyler\Downloads\ffmpeg-1bed27a-af2b166-win64-nonfree\ffmpeg.exe"
+# Change these
+$ffmpegBinary = "C:\Users\tyler\Downloads\ffmpeg-1961492-af2b166-win64-nonfree\ffmpeg.exe"
 
 $inputDir = "C:\Users\tyler\handbrake-input\"
 $outputDir = "C:\Users\tyler\handbrake-output\"
+
+# libaom-av1: https://trac.ffmpeg.org/wiki/Encode/AV1
+# audio: https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio
 
 foreach ($file in Get-ChildItem -Path $inputDir)
 {
