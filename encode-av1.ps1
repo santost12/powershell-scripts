@@ -1,5 +1,5 @@
 # Change these
-$ffmpegBinary = "C:\Users\tyler\Downloads\ffmpeg-1961492-af2b166-win64-nonfree\ffmpeg.exe"
+$ffmpegBinary = "C:\Users\tyler\bin\ffmpeg-2022-04-25-git-f2724d2b69-full_build\bin\ffmpeg.exe"
 
 # libaom-av1: https://trac.ffmpeg.org/wiki/Encode/AV1
 # audio: https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio
@@ -58,7 +58,6 @@ if ($10bit -eq "yes" -and $copyAudio -eq "yes")
 {
 	& $ffmpegBinary -i $inputFile -c:v libaom-av1 -crf $crf -pix_fmt yuv420p10le -b:v 0 -cpu-used $cpuUsed -c:a copy $outputFile
 }
-
 
 # not 10bit section
 if ($10bit -eq "no" -and $copyAudio -eq "no")
